@@ -1,0 +1,50 @@
+/* app/app.component.css */
+/*mat-toolbar {
+  position: relative;
+  z-index: 1;
+  overflow-x: auto;
+}
+
+mat-toolbar-row {
+  justify-content:space-between;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+a.active {
+  background-color: rgba(0,0,0, 0.3);
+}
+
+h1 {
+  margin: 0;
+}
+
+h1 .light {
+  font-weight: 100;
+}*/
+/********************************************************
+    Template Name: neuron-finance
+    Created By: TrendyTheme
+    Envato Profile: https://themeforest.net/user/trendytheme
+    Website: http://trendytheme.net
+    Version: 1.0
+    Support: http://trendytheme.net/support
+*********************************************************/
+
+:host ::ng-deep .pad-top-20 {
+  padding-top: 20px;
+}
+:host ::ng-deep .pad-top-10 {
+  padding-top: 10px;
+}
+:host ::ng-deep .pad-10 {
+  padding: 10px;
+}
+:host ::ng-deep .no-mgn-b {
+  margin-bottom: 0;
+}
+:host ::ng-deep .pull-right {
+  float: right;
+}

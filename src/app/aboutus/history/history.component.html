@@ -1,0 +1,39 @@
+<div id="banner-home" class="bread-crumb container container-divider">
+  <div id="example">
+    <div id="slides">
+      <div class="slides_container">
+        <div class="slide">
+          <img src="images/inner-ban1.jpg" alt="" />
+          <div class="caption" style="padding:0 0 0 0!important; top:45px;">
+            <h1>Certifications</h1>
+            <p style="text-transform: capitalize !important;">
+              You are here : <a href="index.php">Home</a> :
+              <a
+                href="#"
+                class="<?=((@$pg == 'certifications') ? 'active' : '') ?>"
+                >certifications</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container container-divider">
+  <div class="left-panel">
+    <h1>Introduction</h1>
+    <p>
+      Enco Engineers Combine Pvt. Ltd. established in 1983 are leading
+      manufacturers of high precision Sheet Metal Parts and Assemblies for
+      Automobile, White Goods and Engineering Industries. ENCO is a leading
+      sheet metal and suspension component supplier to to Maruti Suzuki.
+    </p>
+    <ul class="row p-4">
+      <div class="col-4 " *ngFor="let imgurl of imageArray; let i = index">
+        <a href="#"><img [src]="imgurl" alt=""/></a>
+      </div>
+    </ul>
+    <div class="divider1"></div>
+  </div>
+</div>
