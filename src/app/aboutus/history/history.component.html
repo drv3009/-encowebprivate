@@ -29,11 +29,20 @@
       Automobile, White Goods and Engineering Industries. ENCO is a leading
       sheet metal and suspension component supplier to to Maruti Suzuki.
     </p>
-    <ul class="row p-4">
-      <div class="col-4 " *ngFor="let imgurl of imageArray; let i = index">
-        <a href="#"><img [src]="imgurl" alt=""/></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-3 col-md-6">
+          <img [src]="imageArray[0]" />
+        </div>
+        <div class="col-6 col-md-12 order-2 order-md-12">
+          <img [src]="imageArray[1]" />
+        </div>
+        <div class="col-3 col-md-6 order-3">
+          <img [src]="imageArray[2]" />
+        </div>
       </div>
-    </ul>
+    </div>
+
     <div class="divider1"></div>
   </div>
 </div>
