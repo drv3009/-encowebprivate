@@ -11,6 +11,10 @@ app-root {
 body {
   /*overflow: hidden;*/
   margin: 0;
+  background: #f4f7f7;
+}
+section {
+  background: #f4f7f7;
 }
 .fnt-raleway {
   font-family: "Raleway", sans-serif;
@@ -18,10 +22,19 @@ body {
 
 .fnt-lato {
   font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 .con {
   min-height: 504px;
+  background-color: #f4f7f7;
+  text-align: center;
+  width: 40%;
+}
+
+.con > ul {
+  text-align: left;
 }
 
 /*

@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
       if (element.path != "" && element.path != "**") {
         this.headerElements.push({
           url: element.path,
-          title: element.data.title
+          title: element.data.title.toUpperCase()
         });
         this.headerElements[currIndex].children = [];
         if (element.children && element.children.length > 0) {
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
             if (childElem.path != "" && childElem.path != "**") {
               this.headerElements[currIndex].children.push({
                 url: childElem.path,
-                title: childElem.data.title
+                title: childElem.data.title.toUpperCase()
               });
             }
           });
