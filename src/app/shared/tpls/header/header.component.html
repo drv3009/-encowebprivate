@@ -1,79 +1,15 @@
-<header>
-  <div class="header-top-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 hidden-xs">
-          <div class="contact">
-            <p>
-              <i class="fa fa-phone"></i>
-              +91-124-401-2599
-            </p>
-            <p>
-              <i class="fa fa-envelope"></i>
-              <a href="#">bd@enco.in</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="social-icon">
-            <ul>
-              <li>
-                <a href="https://linkedin.com/company/enco-engineers-combine/"
-                  ><i class="fa fa-linkedin"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <nav class="navbar navbar-default navbar-sticky bootsnav">
-    <div class="top-search">
-      <div class="container">
-        <div class="input-group">
-          <span class="input-group-addon"><i class="fa fa-search"></i></span>
-          <input type="text" class="form-control" placeholder="Search" />
-          <span class="input-group-addon close-search"
-            ><i class="fa fa-times"></i
-          ></span>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="navbar-header">
-        <button
-          type="button"
-          class="navbar-toggle"
-          data-toggle="collapse"
-          data-target="#navbar-menu"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-        <a class="navbar-brand" href="index.html"
-          ><img src="assets/img/logo.png" class="logo logo-scrolled" alt=""
-        /></a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-menu">
-        <ul class="nav navbar-nav navbar-right" data-in="" data-out="">
-          <li class="dropdown" *ngFor="let item of headerElements">
-            <a
-              routerLink="{{ '/' + item.url }}"
-              class="dropdown-toggle"
-              data-toggle="dropdown"
-              >{{ item.title }}</a
-            >
-            <ul class="dropdown-menu">
-              <li *ngFor="let childItem of item.children">
-                <a routerLink="{{ '/' + item.url + '/' + childItem.url }}">{{
-                  childItem.title
-                }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="clearfix"></div>
-</header>
+<mat-toolbar>
+  <ng-container *ngFor="let header of headerElements; let ind = index">
+    <button mat-button [matMenuTriggerFor]="header.subMenuRef">
+      {{ header.title }}
+    </button>
+  </ng-container>
+  <mat-menu #ABOUTUS="matMenu">
+    <button *ngFor="let el of childElements.ABOUTUS" mat-menu-item>
+      {{ el.title }}
+    </button>
+  </mat-menu>
+  <mat-menu #BUSINESSPROFILE="matMenu"></mat-menu>
+  <mat-menu #TECHNOLOGY="matMenu"></mat-menu>
+  <mat-menu #CAREERS="matMenu"></mat-menu>
+</mat-toolbar>
